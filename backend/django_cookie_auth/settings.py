@@ -121,3 +121,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CSRF_COOKIE_SAMESITE = 'Strict'
+SESSION_COOKIE_SAMESITE = 'Strict'
+CSRF_COOKIE_HTTPONLY = False  # False since we will grab it via universal-cookies
+SESSION_COOKIE_HTTPONLY = True
+
+# PROD ONLY
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True
+
+# Notes:
+# Setting CSRF_COOKIE_SAMESITE and SESSION_COOKIE_SAMESITE to True prevents cookies and CSRF tokens
+# from being sent from any external requests.
+#
+# Setting CSRF_COOKIE_HTTPONLY and SESSION_COOKIE_HTTPONLY to True blocks client-side JavaScript from accessing the CSRF
+# and session cookies. We set CSRF_COOKIE_HTTPONLY to False since we'll be accessing the cookie via JavaScript.
+#
+# If you're in production, you should serve your website over HTTPS and enable CSRF_COOKIE_SECURE and SESSION_COOKIE_SECURE,' \
+#  which will only allow the cookies to be sent over HTTPS.
