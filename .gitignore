@@ -2,6 +2,8 @@
 /venv/
 /env/
 
+/.idea
+
 #/media/uploads/
 #/media/cache/
 #/media/blog_posts/
