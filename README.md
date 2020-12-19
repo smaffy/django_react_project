@@ -1,5 +1,7 @@
 Django(DRF), React(SPA), nginx, Docker 
 
+Django DRF + Frontend served separately (same domain)
+
 Authenticate Single-Page Applications (SPAs) with session-based authentication.  
 Using Django for our backend while the frontend will be built with React, a JavaScript library designed for building user interfaces.
 
@@ -55,5 +57,7 @@ Using Django for our backend while the frontend will be built with React, a Java
 
 
 
+pip install Django
+pip install djangorestframework
 
 npm install universal-cookie
